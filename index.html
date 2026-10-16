@@ -970,9 +970,9 @@ function blob(cx, cy, r, seed) {
   return { t: 'poly', p };
 }
 const PRESETS = [
-  { id: 'airfoil', name: 'Airfoil', sub: 'NACA 2412 wing at 6°', mode: 0, view: 0,
+  { id: 'airfoil', name: 'Airfoil', sub: 'NACA 4412 wing at 6°', mode: 0, view: 0,
     tip: 'Smoke lines squeeze together and speed up over the top of the wing. Raise the angle of attack past about 12° (arrow keys or two fingers) and watch the flow peel away from the upper surface and roll into vortices: that is stall. Open the lift curve to measure it.',
-    set: () => ({ shapes: [airfoil('2412', 0.45)], body: { x: 0.36 * sim.A, y: 0.5, a: 6 }, ref: 0.45, wind: 0.6, visc: 0.0015, fric: 0.15 }) },
+    set: () => ({ shapes: [airfoil('4412', 0.45)], body: { x: 0.36 * sim.A, y: 0.5, a: 6 }, ref: 0.45, wind: 0.6, visc: 0.0015, fric: 0.15 }) },
   { id: 'stall', name: 'Stalled wing', sub: 'NACA 0012 at 20°', mode: 0, view: 4,
     tip: 'At 20° the flow cannot follow the upper surface. Large vortices peel off and roll downstream, and the lift trace in the readout swings up and down. Lower the angle until the wake calms.',
     set: () => ({ shapes: [airfoil('0012', 0.5)], body: { x: 0.34 * sim.A, y: 0.5, a: 20 }, ref: 0.5, wind: 0.6, visc: 0.0015, fric: 0.2 }) },
